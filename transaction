@@ -1,0 +1,10 @@
+import MyContract from 0x01
+
+transaction (name : String, no: UInt32) {
+
+  prepare(acct: AuthAccount) {}
+
+  execute {
+    MyContract.addPerson(name: name, no: no)
+  }
+}
